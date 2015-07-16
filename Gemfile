@@ -10,15 +10,14 @@ group :development, :test do
   gem 'factory_girl', '>= 4.1.0'
   # auto-load factories from spec/factories
   gem 'factory_girl_rails'
+  # Point to staging/rails-4.1 on github
+  gem 'metasploit-yard', github: 'rapid7/metasploit-yard', branch: 'staging/rails-4.1'
 end
 
 group :test do
   # rails is not used because activerecord should not be included, but rails would normally coordinate the versions
   # between its dependencies, which is now handled by this constraint.
-  rails_version_constraint = [
-      '>= 4.0.9',
-      '< 4.1.0'
-  ]
+  rails_version_constraint = ['~> 4.1.0']
 
   # Dummy app uses actionpack for ActionController, but not rails since it doesn't use activerecord.
   gem 'actionpack', *rails_version_constraint

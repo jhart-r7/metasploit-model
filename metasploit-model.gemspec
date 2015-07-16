@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'bundler', '~> 1.3'
   spec.add_development_dependency 'metasploit-version', '~> 0.1.3'
-  spec.add_development_dependency 'metasploit-yard', '~> 1.0'
+  #spec.add_development_dependency 'metasploit-yard'
   spec.add_development_dependency 'rake'
 
   # documentation
@@ -28,7 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'yard', '< 0.8.7.4'
 
   # Dependency loading
-  rails_version_constraints = ['>= 4.0.9', '< 4.1.0']
+  rails_version_constraints = ['~> 4.1.0']
 
   spec.add_runtime_dependency 'activemodel', *rails_version_constraints
   spec.add_runtime_dependency 'activesupport', *rails_version_constraints
